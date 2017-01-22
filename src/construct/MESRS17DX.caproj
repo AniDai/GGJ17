@@ -1,0 +1,2693 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>MESRS17DX</name>
+    <description></description>
+    <version>1.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>2qpiupr2gjili</unique-id>
+    <saved-with-version>24200</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>320</width>
+        <height>180</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
+        <prop name="Fullscreen scaling">Low quality</prop>
+        <prop name="Fullscreen scaling quality">Low</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use iOS retina display">All devices</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Gamepad" sid="996683554706134">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Keyboard" sid="4436305314906168">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="3506161195311074">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Touch" sid="2463496682349194">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Audio" sid="2722091819329769">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Browser" sid="3498868852026895">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="prompt" sid="211571685314069">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="starttimer" sid="601567843550391" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="792023428896176">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="277156349938646" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\My Games\GGJ17\src\graphics\countdown-0go.png">
+                        <collision-poly>
+                            <point x="0.121951" y="0.217391" />
+                            <point x="0.878049" y="0.217391" />
+                            <point x="1" y="0.5" />
+                            <point x="0.878049" y="0.782609" />
+                            <point x="0.121951" y="0.782609" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\My Games\GGJ17\src\graphics\countdown-2set.png">
+                        <collision-poly>
+                            <point x="0.121951" y="0.217391" />
+                            <point x="0.878049" y="0.217391" />
+                            <point x="1" y="0.5" />
+                            <point x="0.878049" y="0.782609" />
+                            <point x="0.121951" y="0.782609" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\My Games\GGJ17\src\graphics\countdown-3ready.png">
+                        <collision-poly>
+                            <point x="0.121951" y="0.217391" />
+                            <point x="0.878049" y="0.217391" />
+                            <point x="1" y="0.5" />
+                            <point x="0.878049" y="0.782609" />
+                            <point x="0.121951" y="0.782609" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="asteroid" sid="206850972918326">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="810925653234187" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.478516" y="0" />
+                            <point x="0.920898" y="0.37207" />
+                            <point x="0.818848" y="0.828613" />
+                            <point x="0.5" y="0.996094" />
+                            <point x="0.199219" y="0.78125" />
+                            <point x="0.162109" y="0.248047" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.177734" y="0.292969" />
+                            <point x="0.524414" y="0.0751953" />
+                            <point x="1" y="0.279297" />
+                            <point x="0.753906" y="0.855469" />
+                            <point x="0.425781" y="0.938477" />
+                            <point x="0" y="0.732422" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.046875" y="0.267578" />
+                            <point x="0.335938" y="0.00585938" />
+                            <point x="0.888672" y="0.363281" />
+                            <point x="0.958984" y="0.806641" />
+                            <point x="0.498047" y="1" />
+                            <point x="0.142578" y="0.724609" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.402344" y="0.0605469" />
+                            <point x="0.712891" y="0.0683594" />
+                            <point x="0.945313" y="0.401367" />
+                            <point x="0.81543" y="0.91748" />
+                            <point x="0.207031" y="1" />
+                            <point x="0.0820313" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.587891" y="0.212891" />
+                            <point x="0.808594" y="0.0898438" />
+                            <point x="0.945313" y="0.595703" />
+                            <point x="0.800781" y="0.918945" />
+                            <point x="0.3125" y="1" />
+                            <point x="0.172852" y="0.646484" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="itemGenerator" sid="679251066239753">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="timer" sid="946091264989279" type="number" />
+                <instance-variable name="wave" sid="307797755628991" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="470823989402648" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="playerCollider" sid="263638883160539">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="attachedTo" sid="214888208029840" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="697351296443480">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="925805775414029" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="comet" sid="240666743835207">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="309704923890571" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.425781" y="0" />
+                            <point x="1" y="0.382813" />
+                            <point x="0.523438" y="1" />
+                            <point x="0" y="0.558594" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.503906" y="0" />
+                            <point x="1" y="0.421875" />
+                            <point x="0.523438" y="1" />
+                            <point x="0" y="0.546875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.394531" y="0" />
+                            <point x="1" y="0.371094" />
+                            <point x="0.574219" y="1" />
+                            <point x="0" y="0.546875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.710938" y="0" />
+                            <point x="1" y="0.507813" />
+                            <point x="0.574219" y="1" />
+                            <point x="0" y="0.523438" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.519531" y="0" />
+                            <point x="1" y="0.492188" />
+                            <point x="0.4375" y="1" />
+                            <point x="0" y="0.523438" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cometTail" sid="228387731103513">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="629332294764815">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="420886435617652">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="853487824658596" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="announcements" sid="253482031930601">
+            <plugin id="Spritefont2" />
+            <behaviors>
+                <behavior-type name="Fade" sid="369946317172672">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="E:\My Games\GGJ17\src\graphics\sprite-font.png" />
+        </object-type>
+        <object-type name="camera" sid="861235662271088">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="973861423227052">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="909827802180268" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="explosion" sid="475664786265435">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="606008291204015">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="5" loop="0" name="exp1" pingpong="0" repeatcount="1" repeatto="0" sid="620607432920293" speed="12">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="7" loop="0" name="exp2" pingpong="0" repeatcount="1" repeatto="0" sid="748679156355396" speed="12">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="7" loop="0" name="exp3" pingpong="0" repeatcount="1" repeatto="0" sid="251437792667565" speed="12">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="7" loop="0" name="exp4" pingpong="0" repeatcount="1" repeatto="0" sid="852797636164333" speed="12">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="23" loop="0" name="exp5" pingpong="0" repeatcount="1" repeatto="0" sid="758762726946966" speed="18">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bgMoon" sid="951691742971255">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="947210002043621" speed="5">
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.588889" original-source="E:\My Games\GGJ17\src\graphics\titlescreen-moon-bg.png">
+                        <collision-poly>
+                            <point x="0.6" y="0.0222222" />
+                            <point x="0.977778" y="0.588889" />
+                            <point x="0.6" y="0.977778" />
+                            <point x="0.0222222" y="0.388889" />
+                            <point x="0.0222222" y="0.588889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bgearth" sid="279585341318064">
+            <plugin id="TiledBg" />
+            <texture original-source="E:\My Games\GGJ17\src\graphics\titlescreen-earth-bg.png" />
+        </object-type>
+        <object-type name="bgstars" sid="596901176975171">
+            <plugin id="TiledBg" />
+            <texture original-source="E:\My Games\GGJ17\src\graphics\titlescreen-star-bg.png" />
+        </object-type>
+        <object-type name="enemyDriver" sid="614138698766553">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="530805475072463">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="379615767658201">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="720277343320629" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="570767328425089">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="satellite" sid="960887708567603">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="380934039093460" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.507813" y="0.271484" />
+                            <point x="1" y="0.393554" />
+                            <point x="0.636719" y="0.486816" />
+                            <point x="0.513672" y="0.785156" />
+                            <point x="0.373047" y="0.476563" />
+                            <point x="0.0410156" y="0.388672" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.507813" y="0.271484" />
+                            <point x="1" y="0.393554" />
+                            <point x="0.636719" y="0.486816" />
+                            <point x="0.513672" y="0.785156" />
+                            <point x="0.373047" y="0.476563" />
+                            <point x="0.0410156" y="0.388672" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.507813" y="0.271484" />
+                            <point x="1" y="0.393554" />
+                            <point x="0.636719" y="0.486816" />
+                            <point x="0.513672" y="0.785156" />
+                            <point x="0.373047" y="0.476563" />
+                            <point x="0.0410156" y="0.388672" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.507813" y="0.271484" />
+                            <point x="1" y="0.393554" />
+                            <point x="0.636719" y="0.486816" />
+                            <point x="0.513672" y="0.785156" />
+                            <point x="0.373047" y="0.476563" />
+                            <point x="0.0410156" y="0.388672" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.507813" y="0.271484" />
+                            <point x="1" y="0.393554" />
+                            <point x="0.636719" y="0.486816" />
+                            <point x="0.513672" y="0.785156" />
+                            <point x="0.373047" y="0.476563" />
+                            <point x="0.0410156" y="0.388672" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="1" name="destroyed" pingpong="0" repeatcount="1" repeatto="0" sid="593072362983361" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\My Games\GGJ17\src\graphics\satellite2.png">
+                        <collision-poly>
+                            <point x="0.0898438" y="0.335938" />
+                            <point x="0.498047" y="0.205078" />
+                            <point x="0.864258" y="0.207031" />
+                            <point x="0.617188" y="0.673828" />
+                            <point x="0.359375" y="0.691406" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="player1" sid="133932920563426">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="ship0" pingpong="0" repeatcount="1" repeatto="0" sid="204370031664380" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships00.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.958333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships01.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship1" pingpong="0" repeatcount="1" repeatto="0" sid="202878716817172" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships02.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.78125" y="0.708333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.28125" y="0.625" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships03.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.78125" y="0.708333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.28125" y="0.625" />
+                            <point x="0.09375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship2" pingpong="0" repeatcount="1" repeatto="0" sid="967493797467167" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships04.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.78125" y="0.5" />
+                            <point x="0.90625" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.916667" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships05.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.84375" y="0.208333" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.90625" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.916667" />
+                            <point x="0.1875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship3" pingpong="0" repeatcount="1" repeatto="0" sid="849586919906291" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships06.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.75" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.6875" y="0.583333" />
+                            <point x="0.3125" y="0.583333" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships07.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.75" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.6875" y="0.583333" />
+                            <point x="0.5" y="0.666667" />
+                            <point x="0.3125" y="0.583333" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship4" pingpong="0" repeatcount="1" repeatto="0" sid="717817212277553" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships08.png">
+                        <collision-poly>
+                            <point x="0.21875" y="0.291667" />
+                            <point x="0.5" y="0.291667" />
+                            <point x="0.65625" y="0.458333" />
+                            <point x="0.71875" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.3125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships09.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0.416667" />
+                            <point x="0.5" y="0.375" />
+                            <point x="0.65625" y="0.458333" />
+                            <point x="0.71875" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.25" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship5" pingpong="0" repeatcount="1" repeatto="0" sid="301766230382982" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships10.png">
+                        <collision-poly>
+                            <point x="0.125" y="0.166667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.78125" y="0.291667" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.21875" y="0.708333" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships11.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.0416667" />
+                            <point x="0.875" y="0.166667" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.21875" y="0.708333" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship6" pingpong="0" repeatcount="1" repeatto="0" sid="338918196106244" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\heli\heli_0.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.458333" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.96875" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.03125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\heli\heli_1.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.458333" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.96875" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship7" pingpong="0" repeatcount="1" repeatto="0" sid="698019473316284" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat0.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.71875" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.15625" y="0.791667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat1.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.71875" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.15625" y="0.791667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="iconKey" sid="488204613787584">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="762767935996606">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="A" pingpong="0" repeatcount="1" repeatto="0" sid="317646539517542" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key00.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="B" pingpong="0" repeatcount="1" repeatto="0" sid="410949699696023" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key01.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="C" pingpong="0" repeatcount="1" repeatto="0" sid="734116649925196" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key02.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="D" pingpong="0" repeatcount="1" repeatto="0" sid="655073763810539" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key03.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="E" pingpong="0" repeatcount="1" repeatto="0" sid="236541103384204" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key04.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="F" pingpong="0" repeatcount="1" repeatto="0" sid="211458573868404" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key05.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="G" pingpong="0" repeatcount="1" repeatto="0" sid="438911863554353" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key06.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="H" pingpong="0" repeatcount="1" repeatto="0" sid="820534195507091" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key07.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="I" pingpong="0" repeatcount="1" repeatto="0" sid="516602830405305" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key08.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="J" pingpong="0" repeatcount="1" repeatto="0" sid="692793390599603" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key09.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="K" pingpong="0" repeatcount="1" repeatto="0" sid="134004718576049" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key10.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="L" pingpong="0" repeatcount="1" repeatto="0" sid="722132728623624" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key11.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="M" pingpong="0" repeatcount="1" repeatto="0" sid="956445887407519" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key12.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="N" pingpong="0" repeatcount="1" repeatto="0" sid="443446954744070" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key13.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="O" pingpong="0" repeatcount="1" repeatto="0" sid="262736050884264" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key14.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="P" pingpong="0" repeatcount="1" repeatto="0" sid="718928528421461" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key15.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Q" pingpong="0" repeatcount="1" repeatto="0" sid="551402414557605" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key16.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="R" pingpong="0" repeatcount="1" repeatto="0" sid="133011389894925" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key17.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="S" pingpong="0" repeatcount="1" repeatto="0" sid="765889028972104" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key18.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="T" pingpong="0" repeatcount="1" repeatto="0" sid="377346140523619" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key19.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="U" pingpong="0" repeatcount="1" repeatto="0" sid="614922630902801" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key20.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="V" pingpong="0" repeatcount="1" repeatto="0" sid="658491641695741" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key21.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="W" pingpong="0" repeatcount="1" repeatto="0" sid="789602786762864" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key22.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="X" pingpong="0" repeatcount="1" repeatto="0" sid="615410855179091" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key23.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Y" pingpong="0" repeatcount="1" repeatto="0" sid="663833266941713" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key24.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Z" pingpong="0" repeatcount="1" repeatto="0" sid="297171587984044" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ17\keys\key25.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0416667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="num3" pingpong="0" repeatcount="1" repeatto="0" sid="760121082089030" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\My Games\GGJ17\src\graphics\characterselect-keys.png">
+                        <collision-poly>
+                            <point x="0.00416667" y="0.00416667" />
+                            <point x="0.995833" y="0.00416667" />
+                            <point x="0.491667" y="0.491667" />
+                            <point x="0.5" y="0.491667" />
+                            <point x="0.504167" y="0.495833" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="player5" sid="585813037931314">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="ship0" pingpong="0" repeatcount="1" repeatto="0" sid="329670636077483" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships00.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.958333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships01.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship1" pingpong="0" repeatcount="1" repeatto="0" sid="483303118370529" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships02.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.78125" y="0.708333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.28125" y="0.625" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships03.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.78125" y="0.708333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.28125" y="0.625" />
+                            <point x="0.09375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship2" pingpong="0" repeatcount="1" repeatto="0" sid="914931965668112" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships04.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.78125" y="0.5" />
+                            <point x="0.90625" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.916667" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships05.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.84375" y="0.208333" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.90625" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.916667" />
+                            <point x="0.1875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship3" pingpong="0" repeatcount="1" repeatto="0" sid="156926276918434" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships06.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.75" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.6875" y="0.583333" />
+                            <point x="0.3125" y="0.583333" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships07.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.75" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.6875" y="0.583333" />
+                            <point x="0.5" y="0.666667" />
+                            <point x="0.3125" y="0.583333" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship4" pingpong="0" repeatcount="1" repeatto="0" sid="875181049368536" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships08.png">
+                        <collision-poly>
+                            <point x="0.21875" y="0.291667" />
+                            <point x="0.5" y="0.291667" />
+                            <point x="0.65625" y="0.458333" />
+                            <point x="0.71875" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.3125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships09.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0.416667" />
+                            <point x="0.5" y="0.375" />
+                            <point x="0.65625" y="0.458333" />
+                            <point x="0.71875" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.25" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship5" pingpong="0" repeatcount="1" repeatto="0" sid="565477552379193" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships10.png">
+                        <collision-poly>
+                            <point x="0.125" y="0.166667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.78125" y="0.291667" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.21875" y="0.708333" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships11.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.0416667" />
+                            <point x="0.875" y="0.166667" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.21875" y="0.708333" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship6" pingpong="0" repeatcount="1" repeatto="0" sid="211629113108206" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\heli\heli_0.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.458333" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.96875" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.03125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\heli\heli_1.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.458333" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.96875" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship7" pingpong="0" repeatcount="1" repeatto="0" sid="525053627997815" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat0.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.71875" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.15625" y="0.791667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat1.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.71875" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.15625" y="0.791667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="player6" sid="796717528672457">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="ship0" pingpong="0" repeatcount="1" repeatto="0" sid="875909780158958" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships00.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.958333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships01.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship1" pingpong="0" repeatcount="1" repeatto="0" sid="776308213345337" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships02.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.78125" y="0.708333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.28125" y="0.625" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships03.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.78125" y="0.708333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.28125" y="0.625" />
+                            <point x="0.09375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship2" pingpong="0" repeatcount="1" repeatto="0" sid="730709239021950" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships04.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.78125" y="0.5" />
+                            <point x="0.90625" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.916667" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships05.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.84375" y="0.208333" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.90625" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.916667" />
+                            <point x="0.1875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship3" pingpong="0" repeatcount="1" repeatto="0" sid="887973338200256" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships06.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.75" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.6875" y="0.583333" />
+                            <point x="0.3125" y="0.583333" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships07.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.75" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.6875" y="0.583333" />
+                            <point x="0.5" y="0.666667" />
+                            <point x="0.3125" y="0.583333" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship4" pingpong="0" repeatcount="1" repeatto="0" sid="515373508753956" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships08.png">
+                        <collision-poly>
+                            <point x="0.21875" y="0.291667" />
+                            <point x="0.5" y="0.291667" />
+                            <point x="0.65625" y="0.458333" />
+                            <point x="0.71875" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.3125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships09.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0.416667" />
+                            <point x="0.5" y="0.375" />
+                            <point x="0.65625" y="0.458333" />
+                            <point x="0.71875" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.25" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship5" pingpong="0" repeatcount="1" repeatto="0" sid="569356203116184" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships10.png">
+                        <collision-poly>
+                            <point x="0.125" y="0.166667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.78125" y="0.291667" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.21875" y="0.708333" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships11.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.0416667" />
+                            <point x="0.875" y="0.166667" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.21875" y="0.708333" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship6" pingpong="0" repeatcount="1" repeatto="0" sid="491034572401966" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\heli\heli_0.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.458333" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.96875" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.03125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\heli\heli_1.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.458333" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.96875" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship7" pingpong="0" repeatcount="1" repeatto="0" sid="194957830485510" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat0.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.71875" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.15625" y="0.791667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat1.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.71875" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.15625" y="0.791667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="player7" sid="883622765836933">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="ship0" pingpong="0" repeatcount="1" repeatto="0" sid="193235922520375" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships00.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.958333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships01.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship1" pingpong="0" repeatcount="1" repeatto="0" sid="626903506235089" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships02.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.78125" y="0.708333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.28125" y="0.625" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships03.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.78125" y="0.708333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.28125" y="0.625" />
+                            <point x="0.09375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship2" pingpong="0" repeatcount="1" repeatto="0" sid="567605606243583" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships04.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.78125" y="0.5" />
+                            <point x="0.90625" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.916667" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships05.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.84375" y="0.208333" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.90625" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.916667" />
+                            <point x="0.1875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship3" pingpong="0" repeatcount="1" repeatto="0" sid="198035188909226" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships06.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.75" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.6875" y="0.583333" />
+                            <point x="0.3125" y="0.583333" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships07.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.75" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.6875" y="0.583333" />
+                            <point x="0.5" y="0.666667" />
+                            <point x="0.3125" y="0.583333" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship4" pingpong="0" repeatcount="1" repeatto="0" sid="344583550941764" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships08.png">
+                        <collision-poly>
+                            <point x="0.21875" y="0.291667" />
+                            <point x="0.5" y="0.291667" />
+                            <point x="0.65625" y="0.458333" />
+                            <point x="0.71875" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.3125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships09.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0.416667" />
+                            <point x="0.5" y="0.375" />
+                            <point x="0.65625" y="0.458333" />
+                            <point x="0.71875" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.25" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship5" pingpong="0" repeatcount="1" repeatto="0" sid="191862388950327" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships10.png">
+                        <collision-poly>
+                            <point x="0.125" y="0.166667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.78125" y="0.291667" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.21875" y="0.708333" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships11.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.0416667" />
+                            <point x="0.875" y="0.166667" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.21875" y="0.708333" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship6" pingpong="0" repeatcount="1" repeatto="0" sid="754902145146241" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\heli\heli_0.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.458333" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.96875" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.03125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\heli\heli_1.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.458333" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.96875" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship7" pingpong="0" repeatcount="1" repeatto="0" sid="626888377259369" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat0.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.71875" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.15625" y="0.791667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat1.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.71875" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.15625" y="0.791667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="player3" sid="177333408551869">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="ship0" pingpong="0" repeatcount="1" repeatto="0" sid="259873104536836" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships00.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.958333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships01.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship1" pingpong="0" repeatcount="1" repeatto="0" sid="798000824899561" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships02.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.78125" y="0.708333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.28125" y="0.625" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships03.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.78125" y="0.708333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.28125" y="0.625" />
+                            <point x="0.09375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship2" pingpong="0" repeatcount="1" repeatto="0" sid="953716460444984" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships04.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.78125" y="0.5" />
+                            <point x="0.90625" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.916667" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships05.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.84375" y="0.208333" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.90625" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.916667" />
+                            <point x="0.1875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship3" pingpong="0" repeatcount="1" repeatto="0" sid="628622403104818" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships06.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.75" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.6875" y="0.583333" />
+                            <point x="0.3125" y="0.583333" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships07.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.75" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.6875" y="0.583333" />
+                            <point x="0.5" y="0.666667" />
+                            <point x="0.3125" y="0.583333" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship4" pingpong="0" repeatcount="1" repeatto="0" sid="681459538072202" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships08.png">
+                        <collision-poly>
+                            <point x="0.21875" y="0.291667" />
+                            <point x="0.5" y="0.291667" />
+                            <point x="0.65625" y="0.458333" />
+                            <point x="0.71875" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.3125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships09.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0.416667" />
+                            <point x="0.5" y="0.375" />
+                            <point x="0.65625" y="0.458333" />
+                            <point x="0.71875" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.25" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship5" pingpong="0" repeatcount="1" repeatto="0" sid="697274794064201" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships10.png">
+                        <collision-poly>
+                            <point x="0.125" y="0.166667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.78125" y="0.291667" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.21875" y="0.708333" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships11.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.0416667" />
+                            <point x="0.875" y="0.166667" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.21875" y="0.708333" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship6" pingpong="0" repeatcount="1" repeatto="0" sid="391310688916320" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\heli\heli_0.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.458333" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.96875" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.03125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\heli\heli_1.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.458333" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.96875" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship7" pingpong="0" repeatcount="1" repeatto="0" sid="797887879122165" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat0.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.71875" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.15625" y="0.791667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat1.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.71875" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.15625" y="0.791667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="player4" sid="847974963178841">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="ship0" pingpong="0" repeatcount="1" repeatto="0" sid="356904719866116" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships00.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.958333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships01.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship1" pingpong="0" repeatcount="1" repeatto="0" sid="297563237982640" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships02.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.78125" y="0.708333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.28125" y="0.625" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships03.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.78125" y="0.708333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.28125" y="0.625" />
+                            <point x="0.09375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship2" pingpong="0" repeatcount="1" repeatto="0" sid="870630674898987" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships04.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.78125" y="0.5" />
+                            <point x="0.90625" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.916667" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships05.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.84375" y="0.208333" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.90625" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.916667" />
+                            <point x="0.1875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship3" pingpong="0" repeatcount="1" repeatto="0" sid="822715457021218" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships06.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.75" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.6875" y="0.583333" />
+                            <point x="0.3125" y="0.583333" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships07.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.75" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.6875" y="0.583333" />
+                            <point x="0.5" y="0.666667" />
+                            <point x="0.3125" y="0.583333" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship4" pingpong="0" repeatcount="1" repeatto="0" sid="847359256816081" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships08.png">
+                        <collision-poly>
+                            <point x="0.21875" y="0.291667" />
+                            <point x="0.5" y="0.291667" />
+                            <point x="0.65625" y="0.458333" />
+                            <point x="0.71875" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.3125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships09.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0.416667" />
+                            <point x="0.5" y="0.375" />
+                            <point x="0.65625" y="0.458333" />
+                            <point x="0.71875" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.25" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship5" pingpong="0" repeatcount="1" repeatto="0" sid="476558875103764" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships10.png">
+                        <collision-poly>
+                            <point x="0.125" y="0.166667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.78125" y="0.291667" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.21875" y="0.708333" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships11.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.0416667" />
+                            <point x="0.875" y="0.166667" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.21875" y="0.708333" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship6" pingpong="0" repeatcount="1" repeatto="0" sid="395799932387588" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\heli\heli_0.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.458333" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.96875" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.03125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\heli\heli_1.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.458333" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.96875" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship7" pingpong="0" repeatcount="1" repeatto="0" sid="484267039923266" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat0.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.71875" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.15625" y="0.791667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat1.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.71875" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.15625" y="0.791667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="player2" sid="233023108978537">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="ship0" pingpong="0" repeatcount="1" repeatto="0" sid="800224773522421" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships00.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.958333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships01.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship1" pingpong="0" repeatcount="1" repeatto="0" sid="309870437569360" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships02.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.78125" y="0.708333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.28125" y="0.625" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships03.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.78125" y="0.708333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.28125" y="0.625" />
+                            <point x="0.09375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship2" pingpong="0" repeatcount="1" repeatto="0" sid="357309472103437" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships04.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.78125" y="0.5" />
+                            <point x="0.90625" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.916667" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships05.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.84375" y="0.208333" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.90625" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.916667" />
+                            <point x="0.1875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship3" pingpong="0" repeatcount="1" repeatto="0" sid="775186124312939" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships06.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.75" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.6875" y="0.583333" />
+                            <point x="0.3125" y="0.583333" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships07.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.75" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.6875" y="0.583333" />
+                            <point x="0.5" y="0.666667" />
+                            <point x="0.3125" y="0.583333" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship4" pingpong="0" repeatcount="1" repeatto="0" sid="926430160732956" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships08.png">
+                        <collision-poly>
+                            <point x="0.21875" y="0.291667" />
+                            <point x="0.5" y="0.291667" />
+                            <point x="0.65625" y="0.458333" />
+                            <point x="0.71875" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.3125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships09.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0.416667" />
+                            <point x="0.5" y="0.375" />
+                            <point x="0.65625" y="0.458333" />
+                            <point x="0.71875" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.25" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship5" pingpong="0" repeatcount="1" repeatto="0" sid="974381788878214" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships10.png">
+                        <collision-poly>
+                            <point x="0.125" y="0.166667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.78125" y="0.291667" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.21875" y="0.708333" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships11.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.0416667" />
+                            <point x="0.875" y="0.166667" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.21875" y="0.708333" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship6" pingpong="0" repeatcount="1" repeatto="0" sid="256718088322725" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\heli\heli_0.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.458333" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.96875" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.03125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\heli\heli_1.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.458333" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.96875" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship7" pingpong="0" repeatcount="1" repeatto="0" sid="170992343774996" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat0.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.71875" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.15625" y="0.791667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat1.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.71875" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.15625" y="0.791667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="player8" sid="983783457953540">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="ship0" pingpong="0" repeatcount="1" repeatto="0" sid="930462820806897" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships00.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.958333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships01.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship1" pingpong="0" repeatcount="1" repeatto="0" sid="601669393270803" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships02.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.78125" y="0.708333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.28125" y="0.625" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships03.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.78125" y="0.708333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.28125" y="0.625" />
+                            <point x="0.09375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship2" pingpong="0" repeatcount="1" repeatto="0" sid="881413074184867" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships04.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.78125" y="0.5" />
+                            <point x="0.90625" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.916667" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships05.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.84375" y="0.208333" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.90625" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.916667" />
+                            <point x="0.1875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship3" pingpong="0" repeatcount="1" repeatto="0" sid="808888353727890" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships06.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.75" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.6875" y="0.583333" />
+                            <point x="0.3125" y="0.583333" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships07.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.75" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.6875" y="0.583333" />
+                            <point x="0.5" y="0.666667" />
+                            <point x="0.3125" y="0.583333" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship4" pingpong="0" repeatcount="1" repeatto="0" sid="553725068290467" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships08.png">
+                        <collision-poly>
+                            <point x="0.21875" y="0.291667" />
+                            <point x="0.5" y="0.291667" />
+                            <point x="0.65625" y="0.458333" />
+                            <point x="0.71875" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.3125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships09.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0.416667" />
+                            <point x="0.5" y="0.375" />
+                            <point x="0.65625" y="0.458333" />
+                            <point x="0.71875" y="0.5" />
+                            <point x="0.75" y="0.666667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.25" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship5" pingpong="0" repeatcount="1" repeatto="0" sid="854056816436443" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships10.png">
+                        <collision-poly>
+                            <point x="0.125" y="0.166667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.78125" y="0.291667" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.21875" y="0.708333" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships11.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.0416667" />
+                            <point x="0.875" y="0.166667" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.21875" y="0.708333" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship6" pingpong="0" repeatcount="1" repeatto="0" sid="129526329572709" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\heli\heli_0.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.458333" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.96875" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.03125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\heli\heli_1.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.458333" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.25" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.96875" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.666667" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="ship7" pingpong="0" repeatcount="1" repeatto="0" sid="285091016379903" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat0.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.71875" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.15625" y="0.791667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat1.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.71875" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.791667" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.15625" y="0.791667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="enter" sid="511426024611906">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="832695081175024" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.015625" y="0.03125" />
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.984375" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.984375" y="0.96875" />
+                            <point x="0.5" y="0.5625" />
+                            <point x="0.171875" y="0.65625" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="logo" sid="816004881173229">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="684337955402458" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\My Games\GGJ17\src\graphics\titlescreen-logo.png">
+                        <collision-poly>
+                            <point x="0.309375" y="0.55" />
+                            <point x="0.5" y="0.0944444" />
+                            <point x="0.690625" y="0.55" />
+                            <point x="0.69375" y="0.5" />
+                            <point x="0.6375" y="0.355556" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0.35625" y="0.366667" />
+                            <point x="0.296875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="joiner" sid="503559119759281">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="864482305618510" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="players" plugin-id="Sprite" sid="844873084794032">
+            <members>
+                <member>player1</member>
+                <member>player2</member>
+                <member>player3</member>
+                <member>player4</member>
+                <member>player5</member>
+                <member>player6</member>
+                <member>player7</member>
+                <member>player8</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="keyCode" sid="400138939577478" type="number" />
+                <instance-variable name="ship" sid="834048455173988" type="number" />
+                <instance-variable name="playerNumber" sid="572434211765930" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="478900355530495">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="371759519401884">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="683652646571750">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="enemies" plugin-id="Sprite" sid="275890695623818">
+            <members>
+                <member>asteroid</member>
+                <member>comet</member>
+                <member>satellite</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="type" sid="128383673251978" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="901300419670807">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="513387731923534">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="ui" plugin-id="Sprite" sid="852277384921791">
+            <members>
+                <member>enter</member>
+                <member>iconKey</member>
+                <member>logo</member>
+                <member>prompt</member>
+            </members>
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout2" sid="507443686815020">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>game.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>game.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Gamepad" uid="2">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Mouse" uid="4" />
+        <global-instance type="Touch" uid="5">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="6">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="7" />
+        <global-instance type="Function" uid="26" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
