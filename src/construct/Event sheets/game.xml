@@ -501,6 +501,13 @@
                                     <param id="0" name="Variable">totalPlayers</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="33" name="Stop all" sid="164072390608927" type="Audio" />
+                                <action id="0" name="Play" sid="920601801000483" type="Audio">
+                                    <param id="0" name="Audio file">victory</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="565767072173378">
@@ -820,8 +827,8 @@
                         </event-block>
                         <event-block sid="333334574813456">
                             <conditions>
-                                <condition id="6" name="On key code released" sid="796262021906979" type="Keyboard">
-                                    <param id="0" name="Keycode">player6.keyCode</param>
+                                <condition id="3" name="On button released" sid="796262021906979" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -844,8 +851,8 @@
                         </event-block>
                         <event-block sid="691750982610842">
                             <conditions>
-                                <condition id="6" name="On key code released" sid="411764495352844" type="Keyboard">
-                                    <param id="0" name="Keycode">player8.keyCode</param>
+                                <condition id="3" name="On button released" sid="571181595145977" type="Mouse">
+                                    <param id="0" name="Mouse button">2</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -884,6 +891,30 @@
                                     </sub-events>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="661062035760458">
+                            <conditions>
+                                <condition id="2" name="Mouse button is down" sid="164233631579572" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="328567839415885" type="player6">
+                                    <param id="0" name="Speed">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="216538477317500">
+                            <conditions>
+                                <condition id="2" name="Mouse button is down" sid="289813452209625" type="Mouse">
+                                    <param id="0" name="Mouse button">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="325890199770786" type="player8">
+                                    <param id="0" name="Speed">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block disabled="1" sid="974123497165875">
                             <conditions>
