@@ -649,10 +649,30 @@
                             <param id="0" name="Object to create">iconKey</param>
                             <param id="1" name="Layer">&quot;ui2&quot;</param>
                             <param id="2" name="X">288</param>
-                            <param id="3" name="Y">18</param>
+                            <param id="3" name="Y">54</param>
                         </action>
                         <action id="4" name="Set animation" sid="241814557680780" type="iconKey">
                             <param id="0" name="Animation">&quot;down&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="514063062874588" type="System">
+                            <param id="0" name="Object to create">iconKey</param>
+                            <param id="1" name="Layer">&quot;ui2&quot;</param>
+                            <param id="2" name="X">80</param>
+                            <param id="3" name="Y">18</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="534423352990380" type="iconKey">
+                            <param id="0" name="Animation">&quot;m&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="917983285656274" type="System">
+                            <param id="0" name="Object to create">iconKey</param>
+                            <param id="1" name="Layer">&quot;ui2&quot;</param>
+                            <param id="2" name="X">116</param>
+                            <param id="3" name="Y">18</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="868616478865031" type="iconKey">
+                            <param id="0" name="Animation">&quot;p&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
