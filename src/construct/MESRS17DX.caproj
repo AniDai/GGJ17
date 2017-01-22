@@ -2726,6 +2726,9 @@
         <file name="racestart.ogg" />
         <file name="select.ogg" />
         <file name="viejitito.ogg" />
+        <file name="Omario.ogg" />
+        <file name="Kirby.ogg" />
+        <file name="Nabey.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="carrera1stop.ogg" />

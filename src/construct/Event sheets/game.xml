@@ -279,7 +279,7 @@
                         </action>
                         <action id="7" name="Play (by name)" sid="447300197364862" type="Audio">
                             <param id="0" name="Folder">0</param>
-                            <param id="1" name="Audio file name">choose(&quot;Mariel&quot;,&quot;Oliver&quot;,&quot;viejitito&quot;)</param>
+                            <param id="1" name="Audio file name">choose(&quot;Mariel&quot;,&quot;Oliver&quot;,&quot;viejitito&quot;,&quot;Omario&quot;,&quot;Nabey&quot;,&quot;Kirby&quot;)</param>
                             <param id="3" name="Loop">0</param>
                             <param id="4" name="Volume">0</param>
                             <param id="2" name="Tag (optional)">&quot;title&quot;</param>
