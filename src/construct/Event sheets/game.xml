@@ -886,6 +886,9 @@
                                                 <action behavior="Bullet" id="0" name="Set speed" sid="791627806889435" type="players">
                                                     <param id="0" name="Speed">0</param>
                                                 </action>
+                                                <action behavior="Sine" id="0" name="Set active" sid="685049262567402" type="players">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
