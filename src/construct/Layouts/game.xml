@@ -540,7 +540,6 @@
                     </properties>
                     <instance-variables>
                         <keyCode>0</keyCode>
-                        <ship>0</ship>
                         <playerNumber>0</playerNumber>
                     </instance-variables>
                     <behavior-instances>
@@ -593,7 +592,6 @@
                     </properties>
                     <instance-variables>
                         <keyCode>0</keyCode>
-                        <ship>0</ship>
                         <playerNumber>0</playerNumber>
                     </instance-variables>
                     <behavior-instances>
@@ -646,7 +644,6 @@
                     </properties>
                     <instance-variables>
                         <keyCode>0</keyCode>
-                        <ship>0</ship>
                         <playerNumber>0</playerNumber>
                     </instance-variables>
                     <behavior-instances>
@@ -699,7 +696,6 @@
                     </properties>
                     <instance-variables>
                         <keyCode>0</keyCode>
-                        <ship>0</ship>
                         <playerNumber>0</playerNumber>
                     </instance-variables>
                     <behavior-instances>
@@ -752,7 +748,6 @@
                     </properties>
                     <instance-variables>
                         <keyCode>0</keyCode>
-                        <ship>0</ship>
                         <playerNumber>0</playerNumber>
                     </instance-variables>
                     <behavior-instances>
@@ -805,7 +800,6 @@
                     </properties>
                     <instance-variables>
                         <keyCode>0</keyCode>
-                        <ship>0</ship>
                         <playerNumber>0</playerNumber>
                     </instance-variables>
                     <behavior-instances>
@@ -858,7 +852,6 @@
                     </properties>
                     <instance-variables>
                         <keyCode>0</keyCode>
-                        <ship>0</ship>
                         <playerNumber>0</playerNumber>
                     </instance-variables>
                     <behavior-instances>
@@ -911,7 +904,6 @@
                     </properties>
                     <instance-variables>
                         <keyCode>0</keyCode>
-                        <ship>0</ship>
                         <playerNumber>0</playerNumber>
                     </instance-variables>
                     <behavior-instances>
@@ -1227,10 +1219,71 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="player" uid="38">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <keyCode>0</keyCode>
+                        <playerNumber>0</playerNumber>
+                        <playern>0</playern>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>32</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>64</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>288</x>
+                        <y>-108</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="Array" uid="39">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>
