@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">game</layout>
-        <event-sheet active="1" order="1">game</event-sheet>
+        <layout active="1" order="0">game</layout>
+        <event-sheet order="1">game</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -22,7 +22,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1">
         <family expanded="0" name="players" />
         <family expanded="0" name="enemies" />
-        <family expanded="0" name="ui" />
+        <family expanded="1" name="charsel" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -54,6 +54,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/player8/" />
         <folder expanded="1" path="animation-folder/enter/" />
         <folder expanded="1" path="animation-folder/logo/" />
-        <folder expanded="1" path="animation-folder/joiner/" />
+        <folder expanded="1" path="animation-folder/fader/" />
+        <folder expanded="1" path="animation-folder/adlogo/" />
     </folders-expanded>
 </c2uistate>
