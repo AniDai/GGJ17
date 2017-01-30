@@ -308,7 +308,6 @@
                             <param id="0" name="Name">&quot;GameStart&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;stop&quot;</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="972344068293039" type="logo" />
                         <action id="6" name="Stop" sid="702124123313604" type="Audio">
                             <param id="0" name="Tag">&quot;music&quot;</param>
                         </action>
@@ -326,7 +325,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="519205806401069">
+                <event-block disabled="1" sid="519205806401069">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="801959643874132" type="System">
                             <param id="0" name="Variable">totalPlayers</param>
@@ -351,8 +350,6 @@
                             <param id="0" name="Group name">&quot;charsel&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="551096445633659" type="iconKey" />
-                        <action id="-9" name="Destroy" sid="319799750063566" type="enter" />
                     </actions>
                     <sub-events>
                         <comment>Start the STOP game</comment>
@@ -365,6 +362,15 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-3" name="Create object" sid="637909515619880" type="System">
+                                    <param id="0" name="Object to create">fader</param>
+                                    <param id="1" name="Layer">&quot;ui2&quot;</param>
+                                    <param id="2" name="X">160</param>
+                                    <param id="3" name="Y">90</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="300060470641792" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
                                 <action id="-12" name="Set group active" sid="579407614587195" type="System">
                                     <param id="0" name="Group name">&quot;STOP&quot;</param>
                                     <param id="1" name="State">1</param>
@@ -379,6 +385,8 @@
                                     <param id="0" name="Instance variable">timer</param>
                                     <param id="1" name="Value">6000</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="514287175114302" type="charsel" />
+                                <action id="-9" name="Destroy" sid="220093585510003" type="versiontxt" />
                             </actions>
                             <sub-events>
                                 <event-block sid="679075267815249">
@@ -886,9 +894,6 @@
                                                 <action behavior="Bullet" id="0" name="Set speed" sid="791627806889435" type="players">
                                                     <param id="0" name="Speed">0</param>
                                                 </action>
-                                                <action behavior="Sine" id="0" name="Set active" sid="685049262567402" type="players">
-                                                    <param id="0" name="State">0</param>
-                                                </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
@@ -1288,20 +1293,6 @@
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block disabled="1" sid="802873463038088">
-                            <conditions>
-                                <condition id="-36" name="Pick overlapping point" sid="515125010055021" type="System">
-                                    <param id="0" name="Object">joiner</param>
-                                    <param id="1" name="X">players.X</param>
-                                    <param id="2" name="Y">players.Y</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="452568411927634" type="joiner" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
