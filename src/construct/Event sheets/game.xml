@@ -4,11 +4,9 @@
     <name>game</name>
     <events>
         <variable constant="0" name="joining" sid="725844102650239" static="0" type="number">0</variable>
-        <variable constant="0" name="totalPlayers" sid="977011541452442" static="0" type="number">8</variable>
+        <variable constant="0" name="playersAlive" sid="977011541452442" static="0" type="number">8</variable>
         <variable constant="0" name="key" sid="675635222812830" static="0" type="text"></variable>
         <variable constant="0" name="game_mode" sid="900464850031910" static="0" type="text">none</variable>
-        <variable constant="1" name="MAXPLAYER" sid="841232044350932" static="0" type="number">8</variable>
-        <variable constant="1" name="MAXSHIPS" sid="388116900776006" static="0" type="number">8</variable>
         <event-group description="" sid="125612221882410" title="charsel">
             <sub-events>
                 <event-block sid="954597163606007">
@@ -19,264 +17,8 @@
                         <action id="-16" name="Set opacity" sid="799178247384281" type="announcements">
                             <param id="0" name="Opacity">0</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="561965678485237" type="players" />
+                        <action id="-9" name="Destroy" sid="561965678485237" type="player" />
                         <action id="-9" name="Destroy" sid="783661659223248" type="enemies" />
-                        <action id="-3" name="Create object" sid="381610493493633" type="System">
-                            <param id="0" name="Object to create">player1</param>
-                            <param id="1" name="Layer">&quot;fg&quot;</param>
-                            <param id="2" name="X">64</param>
-                            <param id="3" name="Y">18</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="831589812487962" type="System">
-                            <param id="0" name="Object to create">iconKey</param>
-                            <param id="1" name="Layer">&quot;ui2&quot;</param>
-                            <param id="2" name="X">32</param>
-                            <param id="3" name="Y">18</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="586682706555282" type="iconKey">
-                            <param id="0" name="Animation">&quot;q&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="346968931555064" type="System">
-                            <param id="0" name="Object to create">player2</param>
-                            <param id="1" name="Layer">&quot;fg&quot;</param>
-                            <param id="2" name="X">256</param>
-                            <param id="3" name="Y">18</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="411220461103430" type="System">
-                            <param id="0" name="Object to create">iconKey</param>
-                            <param id="1" name="Layer">&quot;ui2&quot;</param>
-                            <param id="2" name="X">288</param>
-                            <param id="3" name="Y">18</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="755491819571473" type="iconKey">
-                            <param id="0" name="Animation">&quot;num3&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="554115162401404" type="System">
-                            <param id="0" name="Object to create">player3</param>
-                            <param id="1" name="Layer">&quot;fg&quot;</param>
-                            <param id="2" name="X">64</param>
-                            <param id="3" name="Y">54</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="916829908845578" type="System">
-                            <param id="0" name="Object to create">iconKey</param>
-                            <param id="1" name="Layer">&quot;ui2&quot;</param>
-                            <param id="2" name="X">32</param>
-                            <param id="3" name="Y">54</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="101168673929854" type="iconKey">
-                            <param id="0" name="Animation">&quot;c&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="747731394353373" type="System">
-                            <param id="0" name="Object to create">player4</param>
-                            <param id="1" name="Layer">&quot;fg&quot;</param>
-                            <param id="2" name="X">256</param>
-                            <param id="3" name="Y">54</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="126227943175793" type="System">
-                            <param id="0" name="Object to create">iconKey</param>
-                            <param id="1" name="Layer">&quot;ui2&quot;</param>
-                            <param id="2" name="X">288</param>
-                            <param id="3" name="Y">54</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="241814557680780" type="iconKey">
-                            <param id="0" name="Animation">&quot;down&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="719162091612911" type="System">
-                            <param id="0" name="Object to create">player5</param>
-                            <param id="1" name="Layer">&quot;fg&quot;</param>
-                            <param id="2" name="X">64</param>
-                            <param id="3" name="Y">90</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="514063062874588" type="System">
-                            <param id="0" name="Object to create">iconKey</param>
-                            <param id="1" name="Layer">&quot;ui2&quot;</param>
-                            <param id="2" name="X">32</param>
-                            <param id="3" name="Y">90</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="534423352990380" type="iconKey">
-                            <param id="0" name="Animation">&quot;m&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="785240748207192" type="System">
-                            <param id="0" name="Object to create">player6</param>
-                            <param id="1" name="Layer">&quot;fg&quot;</param>
-                            <param id="2" name="X">256</param>
-                            <param id="3" name="Y">90</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="331441010491272" type="System">
-                            <param id="0" name="Object to create">iconKey</param>
-                            <param id="1" name="Layer">&quot;ui2&quot;</param>
-                            <param id="2" name="X">288</param>
-                            <param id="3" name="Y">90</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="671951523820966" type="iconKey">
-                            <param id="0" name="Animation">&quot;mousel&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="624734832770248" type="System">
-                            <param id="0" name="Object to create">player7</param>
-                            <param id="1" name="Layer">&quot;fg&quot;</param>
-                            <param id="2" name="X">64</param>
-                            <param id="3" name="Y">126</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="917983285656274" type="System">
-                            <param id="0" name="Object to create">iconKey</param>
-                            <param id="1" name="Layer">&quot;ui2&quot;</param>
-                            <param id="2" name="X">32</param>
-                            <param id="3" name="Y">126</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="868616478865031" type="iconKey">
-                            <param id="0" name="Animation">&quot;p&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="604048353795855" type="System">
-                            <param id="0" name="Object to create">player8</param>
-                            <param id="1" name="Layer">&quot;fg&quot;</param>
-                            <param id="2" name="X">256</param>
-                            <param id="3" name="Y">126</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="400043583657669" type="System">
-                            <param id="0" name="Object to create">iconKey</param>
-                            <param id="1" name="Layer">&quot;ui2&quot;</param>
-                            <param id="2" name="X">288</param>
-                            <param id="3" name="Y">126</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="328932632652387" type="iconKey">
-                            <param id="0" name="Animation">&quot;mouser&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="650082362378539" type="player1">
-                            <param id="0" name="Instance variable">keyCode</param>
-                            <param id="1" name="Value">81</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="131736387785801" type="player1">
-                            <param id="0" name="Instance variable">playerNumber</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="954366575465839" type="player1">
-                            <param id="0" name="Instance variable">ship</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="951225962339642" type="player1">
-                            <param id="0" name="Animation">&quot;ship1&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="705040059155326" type="player2">
-                            <param id="0" name="Instance variable">keyCode</param>
-                            <param id="1" name="Value">99</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="951460184665704" type="player2">
-                            <param id="0" name="Instance variable">playerNumber</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="939330073524919" type="player2">
-                            <param id="0" name="Instance variable">ship</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="675771349151065" type="player2">
-                            <param id="0" name="Animation">&quot;ship2&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="263458086060696" type="player3">
-                            <param id="0" name="Instance variable">keyCode</param>
-                            <param id="1" name="Value">67</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="958292498630204" type="player3">
-                            <param id="0" name="Instance variable">playerNumber</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="284580243127463" type="player3">
-                            <param id="0" name="Instance variable">ship</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="513633168625001" type="player3">
-                            <param id="0" name="Animation">&quot;ship3&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="494242441754590" type="player4">
-                            <param id="0" name="Instance variable">keyCode</param>
-                            <param id="1" name="Value">40</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="988004506512744" type="player4">
-                            <param id="0" name="Instance variable">playerNumber</param>
-                            <param id="1" name="Value">4</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="589834187637409" type="player4">
-                            <param id="0" name="Instance variable">ship</param>
-                            <param id="1" name="Value">4</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="227702202030966" type="player4">
-                            <param id="0" name="Animation">&quot;ship4&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="355549911892946" type="player5">
-                            <param id="0" name="Instance variable">keyCode</param>
-                            <param id="1" name="Value">77</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="282706500633092" type="player5">
-                            <param id="0" name="Instance variable">playerNumber</param>
-                            <param id="1" name="Value">5</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="721936589699546" type="player5">
-                            <param id="0" name="Instance variable">ship</param>
-                            <param id="1" name="Value">5</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="822814813057841" type="player5">
-                            <param id="0" name="Animation">&quot;ship5&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="418427800184941" type="player6">
-                            <param id="0" name="Instance variable">keyCode</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="316044166394232" type="player6">
-                            <param id="0" name="Instance variable">playerNumber</param>
-                            <param id="1" name="Value">6</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="320852417862834" type="player6">
-                            <param id="0" name="Instance variable">ship</param>
-                            <param id="1" name="Value">6</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="919837280761245" type="player6">
-                            <param id="0" name="Animation">&quot;ship6&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="588085369184083" type="player7">
-                            <param id="0" name="Instance variable">keyCode</param>
-                            <param id="1" name="Value">80</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="974452221453305" type="player7">
-                            <param id="0" name="Instance variable">playerNumber</param>
-                            <param id="1" name="Value">7</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="928790764431501" type="player7">
-                            <param id="0" name="Instance variable">ship</param>
-                            <param id="1" name="Value">7</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="193643877685096" type="player7">
-                            <param id="0" name="Animation">&quot;ship7&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="232939924888199" type="player8">
-                            <param id="0" name="Instance variable">keyCode</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="453702601785629" type="player8">
-                            <param id="0" name="Instance variable">playerNumber</param>
-                            <param id="1" name="Value">8</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="178728779574590" type="player8">
-                            <param id="0" name="Instance variable">ship</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="527650205883509" type="player8">
-                            <param id="0" name="Animation">&quot;ship0&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
                         <action id="7" name="Play (by name)" sid="447300197364862" type="Audio">
                             <param id="0" name="Folder">0</param>
                             <param id="1" name="Audio file name">choose(&quot;Mariel&quot;,&quot;Oliver&quot;,&quot;viejitito&quot;,&quot;Omario&quot;,&quot;Nabey&quot;,&quot;Kirby&quot;)</param>
@@ -290,17 +32,81 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;music&quot;</param>
                         </action>
+                        <action id="2" name="Set at X" sid="418250901340375" type="Array">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">81</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="409823391055017" type="Array">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">99</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="137175741992085" type="Array">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">67</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="279112252681332" type="Array">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">40</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="715975599037061" type="Array">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">77</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="380210613076897" type="Array">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Value">80</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="986065502695550" type="Array">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="877093980134256" type="Array">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="538884729605652">
+                            <conditions>
+                                <condition id="-10" name="For" sid="300174163032756" type="System">
+                                    <param id="0" name="Name">&quot;playerCreate&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="978526522730558" type="System">
+                                    <param id="0" name="Object to create">player</param>
+                                    <param id="1" name="Layer">&quot;fg&quot;</param>
+                                    <param id="2" name="X">loopindex%2 = 0 ?  64 : 256</param>
+                                    <param id="3" name="Y">loopindex%2 = 0 ? 36*(loopindex+1)/2 :  36*loopindex/2</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="696577359011151" type="System">
+                                    <param id="0" name="Object to create">iconKey</param>
+                                    <param id="1" name="Layer">&quot;fg&quot;</param>
+                                    <param id="2" name="X">loopindex%2 = 0 ? 32 : 288</param>
+                                    <param id="3" name="Y">loopindex%2 = 0 ? 36*(loopindex+1)/2 :  36*loopindex/2</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="403323109323754" type="player">
+                                    <param id="0" name="Instance variable">playern</param>
+                                    <param id="1" name="Value">loopindex</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="102221252233730" type="player">
+                                    <param id="0" name="Animation">&quot;ship&quot;&amp;loopindex</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="706019804029161" type="iconKey">
+                                    <param id="0" name="Animation">&quot;key&quot;&amp;loopindex</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="161465886945525">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="671242952664292" type="Keyboard">
                             <param id="0" name="Key">13 (Return)</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="204949668952341" type="System">
-                            <param id="0" name="Variable">totalPlayers</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -323,18 +129,7 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="519205806401069">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="801959643874132" type="System">
-                            <param id="0" name="Variable">totalPlayers</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="277712974173884" type="enter">
+                        <action id="5" name="Set frame" sid="180291453423797" type="enter">
                             <param id="0" name="Frame number">1</param>
                         </action>
                     </actions>
@@ -392,29 +187,29 @@
                                 <event-block sid="679075267815249">
                                     <conditions>
                                         <condition id="-11" name="For Each" sid="599811138230071" type="System">
-                                            <param id="0" name="Object">players</param>
+                                            <param id="0" name="Object">player</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-3" name="Set position" sid="362476807328485" type="players">
+                                        <action id="-3" name="Set position" sid="362476807328485" type="player">
                                             <param id="0" name="X">64</param>
                                             <param id="1" name="Y">90</param>
                                         </action>
-                                        <action behavior="Sine" id="5" name="Set cycle position" sid="381008248217666" type="players">
+                                        <action behavior="Sine" id="5" name="Set cycle position" sid="381008248217666" type="player">
                                             <param id="0" name="Cycle position">random(-1,1)</param>
                                         </action>
-                                        <action id="0" name="Spawn another object" sid="231210505020041" type="players">
+                                        <action id="0" name="Spawn another object" sid="231210505020041" type="player">
                                             <param id="0" name="Object">playerCollider</param>
                                             <param id="1" name="Layer">&quot;fg&quot;</param>
                                             <param id="2" name="Image point">0</param>
                                         </action>
                                         <action behavior="Pin" id="0" name="Pin to object" sid="290907225049310" type="playerCollider">
-                                            <param id="0" name="Pin to">players</param>
+                                            <param id="0" name="Pin to">player</param>
                                             <param id="1" name="Mode">1</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="692979839499773" type="playerCollider">
                                             <param id="0" name="Instance variable">attachedTo</param>
-                                            <param id="1" name="Value">players.playerNumber</param>
+                                            <param id="1" name="Value">player.playern</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -430,7 +225,7 @@
                 <event-block sid="101533719603162">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="931714624048256" type="System">
-                            <param id="0" name="Variable">totalPlayers</param>
+                            <param id="0" name="Variable">playersAlive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -438,7 +233,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="508794587024844" type="announcements">
-                            <param id="0" name="Text">&quot;Player &quot;&amp;str(players.playerNumber)&amp;&quot; wins!&quot;</param>
+                            <param id="0" name="Text">&quot;Player &quot;&amp;str(player.playern)&amp;&quot; wins!&quot;</param>
                         </action>
                         <action id="-16" name="Set opacity" sid="321894081769281" type="announcements">
                             <param id="0" name="Opacity">100</param>
@@ -461,7 +256,7 @@
                     </conditions>
                     <actions>
                         <action id="-11" name="Subtract from" sid="682045380933149" type="System">
-                            <param id="0" name="Variable">totalPlayers</param>
+                            <param id="0" name="Variable">playersAlive</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
@@ -469,7 +264,7 @@
                         <event-block sid="719997393032661">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="315173251725508" type="System">
-                                    <param id="0" name="Variable">totalPlayers</param>
+                                    <param id="0" name="Variable">playersAlive</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
@@ -478,7 +273,7 @@
                                 <action id="11" name="Set collisions enabled" sid="882283997331515" type="enemies">
                                     <param id="0" name="Collisions">0</param>
                                 </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="670635175989185" type="players">
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="670635175989185" type="player">
                                     <param id="0" name="State">0</param>
                                 </action>
                                 <action id="-12" name="Set group active" sid="370416312470783" type="System">
@@ -506,7 +301,7 @@
                                     <param id="0" name="Seconds">2</param>
                                 </action>
                                 <action id="-11" name="Subtract from" sid="533866007964868" type="System">
-                                    <param id="0" name="Variable">totalPlayers</param>
+                                    <param id="0" name="Variable">playersAlive</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="33" name="Stop all" sid="164072390608927" type="Audio" />
@@ -521,12 +316,12 @@
                         <event-block sid="565767072173378">
                             <conditions>
                                 <condition id="-34" name="Pick by evaluate" sid="297675517780618" type="System">
-                                    <param id="0" name="Object">players</param>
-                                    <param id="1" name="Expression">players.playerNumber = Function.Param(0)</param>
+                                    <param id="0" name="Object">player</param>
+                                    <param id="1" name="Expression">player.playern = Function.Param(0)</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="106195597110231" type="players" />
+                                <action id="-9" name="Destroy" sid="106195597110231" type="player" />
                             </actions>
                             <sub-events>
                                 <event-block sid="399603641633034">
@@ -538,7 +333,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Append text" sid="211170255075650" type="announcements">
-                                            <param id="0" name="Text">newline&amp;&quot;Player &quot;&amp;str(players.playerNumber)&amp;&quot; defeated!&quot;</param>
+                                            <param id="0" name="Text">newline&amp;&quot;Player &quot;&amp;str(player.playern)&amp;&quot; defeated!&quot;</param>
                                         </action>
                                         <action behavior="Fade" id="0" name="Restart fade" sid="922528174784204" type="announcements" />
                                     </actions>
@@ -549,7 +344,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set text" sid="176959670148321" type="announcements">
-                                            <param id="0" name="Text">&quot;Player &quot;&amp;str(players.playerNumber)&amp;&quot; defeated!&quot;</param>
+                                            <param id="0" name="Text">&quot;Player &quot;&amp;str(player.playern)&amp;&quot; defeated!&quot;</param>
                                         </action>
                                         <action behavior="Fade" id="0" name="Restart fade" sid="895359801356474" type="announcements" />
                                     </actions>
@@ -564,7 +359,7 @@
                             <param id="0" name="Key">13 (Return)</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="841272711267333" type="System">
-                            <param id="0" name="Variable">totalPlayers</param>
+                            <param id="0" name="Variable">playersAlive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -572,7 +367,7 @@
                     <actions>
                         <action id="-26" name="Restart layout" sid="775850486422739" type="System" />
                         <action id="-9" name="Set value" sid="890873404808951" type="System">
-                            <param id="0" name="Variable">totalPlayers</param>
+                            <param id="0" name="Variable">playersAlive</param>
                             <param id="1" name="Value">8</param>
                         </action>
                         <action id="-12" name="Set group active" sid="721950086376343" type="System">
@@ -584,10 +379,144 @@
                 </event-block>
                 <event-group description="" sid="658765212495686" title="gameon">
                     <sub-events>
+                        <event-block sid="650543210139937">
+                            <conditions>
+                                <condition id="-10" name="For" sid="555354711817650" type="System">
+                                    <param id="0" name="Name">&quot;iskeydown&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">5</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="240668115440322">
+                                    <conditions>
+                                        <condition id="5" name="Key code is down" sid="402431241075942" type="Keyboard">
+                                            <param id="0" name="Keycode">Array.At(loopindex)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="625111176412763" type="Function">
+                                            <param id="0" name="Name">&quot;playerStop&quot;</param>
+                                            <param id="1" name="Parameter {n}">loopindex</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="439171893467209">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="149165962470628" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="775619801707144" type="Function">
+                                            <param id="0" name="Name">&quot;playerMove&quot;</param>
+                                            <param id="1" name="Parameter {n}">loopindex</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="661062035760458">
+                            <conditions>
+                                <condition id="2" name="Mouse button is down" sid="164233631579572" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="518368422387885" type="Function">
+                                    <param id="0" name="Name">&quot;playerStop&quot;</param>
+                                    <param id="1" name="Parameter {n}">6</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="216538477317500">
+                            <conditions>
+                                <condition id="2" name="Mouse button is down" sid="289813452209625" type="Mouse">
+                                    <param id="0" name="Mouse button">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="810989913420543" type="Function">
+                                    <param id="0" name="Name">&quot;playerStop&quot;</param>
+                                    <param id="1" name="Parameter {n}">7</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="333334574813456">
+                            <conditions>
+                                <condition id="3" name="On button released" sid="796262021906979" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="171346961681001" type="Function">
+                                    <param id="0" name="Name">&quot;playerMove&quot;</param>
+                                    <param id="1" name="Parameter {n}">6</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="691750982610842">
+                            <conditions>
+                                <condition id="3" name="On button released" sid="571181595145977" type="Mouse">
+                                    <param id="0" name="Mouse button">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="743189292180990" type="Function">
+                                    <param id="0" name="Name">&quot;playerMove&quot;</param>
+                                    <param id="1" name="Parameter {n}">7</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="383378420444821">
+                            <conditions>
+                                <condition id="0" name="On function" sid="399486302869854" type="Function">
+                                    <param id="0" name="Name">&quot;playerStop&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="890897881544089">
+                                    <conditions>
+                                        <condition id="-34" name="Pick by evaluate" sid="619229247429046" type="System">
+                                            <param id="0" name="Object">player</param>
+                                            <param id="1" name="Expression">player.playern = Function.Param(0)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="0" name="Set speed" sid="505976263092983" type="player">
+                                            <param id="0" name="Speed">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="772313812582849">
+                            <conditions>
+                                <condition id="0" name="On function" sid="884161533797784" type="Function">
+                                    <param id="0" name="Name">&quot;playerMove&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="930641472030583">
+                                    <conditions>
+                                        <condition id="-34" name="Pick by evaluate" sid="324820100314365" type="System">
+                                            <param id="0" name="Object">player</param>
+                                            <param id="1" name="Expression">player.playern = Function.Param(0)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="0" name="Set speed" sid="483950845446331" type="player">
+                                            <param id="0" name="Speed">STOP_PLAYERSPEED</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="262942460859808">
                             <conditions>
                                 <condition id="-1" name="Every tick" sid="779536239038819" type="System" />
-                                <condition id="-15" name="Pick nearest/furthest" sid="656381596483931" type="players">
+                                <condition id="-15" name="Pick nearest/furthest" sid="656381596483931" type="player">
                                     <param id="0" name="Which">1</param>
                                     <param id="1" name="X">0</param>
                                     <param id="2" name="Y">0</param>
@@ -595,13 +524,13 @@
                             </conditions>
                             <actions>
                                 <action id="-1" name="Set X" sid="109221522473132" type="camera">
-                                    <param id="0" name="X">lerp(Self.X, Players.X, 0.03)</param>
+                                    <param id="0" name="X">lerp(Self.X, Player.X, 0.03)</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="177388053136216">
                             <conditions>
-                                <condition id="-1" name="Compare X" sid="219402481546313" type="players">
+                                <condition id="-1" name="Compare X" sid="219402481546313" type="player">
                                     <param id="0" name="Comparison">2</param>
                                     <param id="1" name="X co-ordinate">camera.X-200</param>
                                 </condition>
@@ -609,7 +538,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="170529411595880" type="Function">
                                     <param id="0" name="Name">&quot;PlayerDeath&quot;</param>
-                                    <param id="1" name="Parameter {n}">players.playerNumber</param>
+                                    <param id="1" name="Parameter {n}">player.playern</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -628,8 +557,8 @@
                                 <event-block sid="686373451711357">
                                     <conditions>
                                         <condition id="-34" name="Pick by evaluate" sid="830801546523775" type="System">
-                                            <param id="0" name="Object">players</param>
-                                            <param id="1" name="Expression">players.playerNumber = playerCollider.attachedTo</param>
+                                            <param id="0" name="Object">player</param>
+                                            <param id="1" name="Expression">player.playern = playerCollider.attachedTo</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -645,7 +574,7 @@
                                         </action>
                                         <action id="0" name="Call function" sid="368410251253659" type="Function">
                                             <param id="0" name="Name">&quot;PlayerDeath&quot;</param>
-                                            <param id="1" name="Parameter {n}">players.playerNumber</param>
+                                            <param id="1" name="Parameter {n}">player.playern</param>
                                         </action>
                                         <action id="28" name="Play at object (by name)" sid="576778926717085" type="Audio">
                                             <param id="0" name="Folder">0</param>
@@ -755,10 +684,13 @@
                                 <condition id="-4" name="Trigger once while true" sid="670438989741289" type="System" />
                             </conditions>
                             <actions>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="291238410888856" type="players">
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="291238410888856" type="player">
                                     <param id="0" name="State">1</param>
                                 </action>
-                                <action behavior="Sine" id="0" name="Set active" sid="466142969571583" type="players">
+                                <action behavior="Bullet" id="0" name="Set speed" sid="614565801954337" type="player">
+                                    <param id="0" name="Speed">STOP_PLAYERSPEED</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="466142969571583" type="player">
                                     <param id="0" name="State">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="640685859427286" type="System">
@@ -772,180 +704,6 @@
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="833299416226149">
-                            <conditions>
-                                <condition id="6" name="On key code released" sid="794440018269890" type="Keyboard">
-                                    <param id="0" name="Keycode">player1.keyCode</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="381104785182606" type="player1">
-                                    <param id="0" name="Speed">STOP_PLAYERSPEED</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="343935033277646">
-                            <conditions>
-                                <condition id="6" name="On key code released" sid="931734936657349" type="Keyboard">
-                                    <param id="0" name="Keycode">player2.keyCode</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="996692055233477" type="player2">
-                                    <param id="0" name="Speed">STOP_PLAYERSPEED</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="761125526912823">
-                            <conditions>
-                                <condition id="6" name="On key code released" sid="684436952557298" type="Keyboard">
-                                    <param id="0" name="Keycode">player3.keyCode</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="924529846887702" type="player3">
-                                    <param id="0" name="Speed">STOP_PLAYERSPEED</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="776938835743412">
-                            <conditions>
-                                <condition id="6" name="On key code released" sid="460800065187639" type="Keyboard">
-                                    <param id="0" name="Keycode">player4.keyCode</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="616622308660214" type="player4">
-                                    <param id="0" name="Speed">STOP_PLAYERSPEED</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="617411137734830">
-                            <conditions>
-                                <condition id="6" name="On key code released" sid="197003253824946" type="Keyboard">
-                                    <param id="0" name="Keycode">player5.keyCode</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="685547791824639" type="player5">
-                                    <param id="0" name="Speed">STOP_PLAYERSPEED</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="333334574813456">
-                            <conditions>
-                                <condition id="3" name="On button released" sid="796262021906979" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="816965294614771" type="player6">
-                                    <param id="0" name="Speed">STOP_PLAYERSPEED</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="723983201213193">
-                            <conditions>
-                                <condition id="6" name="On key code released" sid="293838452167374" type="Keyboard">
-                                    <param id="0" name="Keycode">player7.keyCode</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="886719595108929" type="player7">
-                                    <param id="0" name="Speed">STOP_PLAYERSPEED</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="691750982610842">
-                            <conditions>
-                                <condition id="3" name="On button released" sid="571181595145977" type="Mouse">
-                                    <param id="0" name="Mouse button">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="650366506477663" type="player8">
-                                    <param id="0" name="Speed">STOP_PLAYERSPEED</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="868293995623988">
-                            <conditions>
-                                <condition id="1" name="On any key pressed" sid="864120434305476" type="Keyboard" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="778148530338561">
-                                    <conditions>
-                                        <condition id="5" name="Key code is down" sid="856848846757272" type="Keyboard">
-                                            <param id="0" name="Keycode">Keyboard.LastKeyCode</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="838577948251134">
-                                            <conditions>
-                                                <condition id="-34" name="Pick by evaluate" sid="126637810189999" type="System">
-                                                    <param id="0" name="Object">players</param>
-                                                    <param id="1" name="Expression">players.keyCode = Keyboard.LastKeyCode</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action behavior="Bullet" id="0" name="Set speed" sid="791627806889435" type="players">
-                                                    <param id="0" name="Speed">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="661062035760458">
-                            <conditions>
-                                <condition id="2" name="Mouse button is down" sid="164233631579572" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="328567839415885" type="player6">
-                                    <param id="0" name="Speed">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="216538477317500">
-                            <conditions>
-                                <condition id="2" name="Mouse button is down" sid="289813452209625" type="Mouse">
-                                    <param id="0" name="Mouse button">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="325890199770786" type="player8">
-                                    <param id="0" name="Speed">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="974123497165875">
-                            <conditions>
-                                <condition id="6" name="On key code released" sid="753691982157037" type="Keyboard">
-                                    <param id="0" name="Keycode">players.keyCode</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block disabled="1" sid="628498387783380">
-                                    <conditions>
-                                        <condition id="-34" name="Pick by evaluate" sid="815919757524309" type="System">
-                                            <param id="0" name="Object">players</param>
-                                            <param id="1" name="Expression">players.keyCode = Keyboard.LastKeyCode</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Bullet" id="0" name="Set speed" sid="133359703724469" type="players">
-                                            <param id="0" name="Speed">STOP_PLAYERSPEED</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                         <event-block sid="428225301053962">
                             <conditions>
@@ -1194,107 +952,5 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-block disabled="1" sid="475842170976067">
-            <conditions>
-                <condition id="1" name="On any key pressed" sid="163596493477874" type="Keyboard" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="454338857284298" type="System">
-                    <param id="0" name="Variable">key</param>
-                    <param id="1" name="Value">Keyboard.LastKeyCode</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block disabled="1" sid="268143306243911">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="954626028446561" type="System">
-                            <param id="0" name="Variable">key</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">37</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="188052003318581" type="System">
-                            <param id="0" name="Variable">key</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">111</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block disabled="1" sid="808374375811820">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="441707960850830" type="System">
-                                    <param id="0" name="Variable">totalPlayers</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Create object" sid="926686041125989" type="System">
-                                    <param id="0" name="Object to create">iconKey</param>
-                                    <param id="1" name="Layer">&quot;ui2&quot;</param>
-                                    <param id="2" name="X">32</param>
-                                    <param id="3" name="Y">18</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="598842882167643" type="iconKey">
-                                    <param id="0" name="Animation">Keyboard.StringFromKeyCode(key)</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="132449770711327" type="System">
-                                    <param id="0" name="Variable">totalPlayers</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="412300513117088" type="System">
-                                    <param id="0" name="Object to create">player1</param>
-                                    <param id="1" name="Layer">&quot;fg&quot;</param>
-                                    <param id="2" name="X">64</param>
-                                    <param id="3" name="Y">18</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="492932142280451" type="player1">
-                                    <param id="0" name="Instance variable">playerNumber</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="687139238889350" type="player1">
-                                    <param id="0" name="Instance variable">ship</param>
-                                    <param id="1" name="Value">floor(random(7))</param>
-                                </action>
-                                <action id="0" name="Call function" sid="643807773929797" type="Function">
-                                    <param id="0" name="Name">&quot;Join&quot;</param>
-                                    <param id="1" name="Parameter {n}">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block disabled="1" sid="398512179511279">
-            <conditions>
-                <condition id="0" name="On function" sid="741190497572713" type="Function">
-                    <param id="0" name="Name">&quot;Join&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="965104742420482" type="System">
-                    <param id="0" name="Variable">joining</param>
-                    <param id="1" name="Value">Function.Param(0)</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block disabled="1" sid="806519153446493">
-                    <conditions>
-                        <condition id="-34" name="Pick by evaluate" sid="328750773663447" type="System">
-                            <param id="0" name="Object">players</param>
-                            <param id="1" name="Expression">players.playerNumber = joining</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="394764902631453" type="players">
-                            <param id="0" name="Animation">&quot;ship&quot;&amp;str(players.ship)</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
     </events>
 </c2eventsheet>
