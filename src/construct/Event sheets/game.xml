@@ -3,10 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>game</name>
     <events>
-        <variable constant="0" name="joining" sid="725844102650239" static="0" type="number">0</variable>
+        <variable constant="0" name="gamemode" sid="570496055471674" static="0" type="number">0</variable>
         <variable constant="0" name="playersAlive" sid="977011541452442" static="0" type="number">8</variable>
-        <variable constant="0" name="key" sid="675635222812830" static="0" type="text"></variable>
-        <variable constant="0" name="game_mode" sid="900464850031910" static="0" type="text">none</variable>
         <event-group description="" sid="125612221882410" title="charsel">
             <sub-events>
                 <event-block sid="954597163606007">
@@ -19,6 +17,7 @@
                         </action>
                         <action id="-9" name="Destroy" sid="561965678485237" type="player" />
                         <action id="-9" name="Destroy" sid="783661659223248" type="enemies" />
+                        <action id="-9" name="Destroy" sid="921411506846601" type="fader" />
                         <action id="7" name="Play (by name)" sid="447300197364862" type="Audio">
                             <param id="0" name="Folder">0</param>
                             <param id="1" name="Audio file name">choose(&quot;Mariel&quot;,&quot;Oliver&quot;,&quot;viejitito&quot;,&quot;Omario&quot;,&quot;Nabey&quot;,&quot;Kirby&quot;)</param>
@@ -103,16 +102,103 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="382836832685858">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="370126686464804" type="Keyboard">
+                            <param id="0" name="Key">13 (Return)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="315786908094500" type="System">
+                            <param id="0" name="Group name">&quot;charsel&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="124327750336930" type="enter">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="713751507276086" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="937648940637990" type="System">
+                            <param id="0" name="Group name">&quot;modesel&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="533046390913763" type="System">
+                            <param id="0" name="Object to create">fader</param>
+                            <param id="1" name="Layer">&quot;ui&quot;</param>
+                            <param id="2" name="X">160</param>
+                            <param id="3" name="Y">90</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="908723701822569" type="fader">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="647656317443164">
+                            <conditions>
+                                <condition id="-10" name="For" sid="908110882677961" type="System">
+                                    <param id="0" name="Name">&quot;modes&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="293782031598244" type="System">
+                                    <param id="0" name="Object to create">modesel</param>
+                                    <param id="1" name="Layer">&quot;ui2&quot;</param>
+                                    <param id="2" name="X">96*loopindex+48</param>
+                                    <param id="3" name="Y">72</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="556496125828907" type="modesel">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="818228949114047" type="modesel">
+                                    <param id="0" name="Animation">&quot;mode&quot;&amp;loopindex</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="616988053749589" type="modesel">
+                                    <param id="0" name="Instance variable">mode</param>
+                                    <param id="1" name="Value">loopindex</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="966795489437273" title="modesel">
+            <sub-events>
+                <event-block sid="308934651013194">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="341450204884287" type="fader">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Opacity">90</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="303434977010998" type="fader">
+                            <param id="0" name="Opacity">self.Opacity+90*dt</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="161465886945525">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="671242952664292" type="Keyboard">
                             <param id="0" name="Key">13 (Return)</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="887910613157742" type="System">
+                            <param id="0" name="Variable">gamemode</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="315589518264599" type="Function">
                             <param id="0" name="Name">&quot;GameStart&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;stop&quot;</param>
+                            <param id="1" name="Parameter {n}">gamemode</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="368186971991869" type="fader">
+                            <param id="0" name="Opacity">100</param>
                         </action>
                         <action id="6" name="Stop" sid="702124123313604" type="Audio">
                             <param id="0" name="Tag">&quot;music&quot;</param>
@@ -129,10 +215,81 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
-                        <action id="5" name="Set frame" sid="180291453423797" type="enter">
-                            <param id="0" name="Frame number">1</param>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="430684792186979">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="488375159162906" type="Keyboard">
+                            <param id="0" name="Key">49 (1)</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="989077248042333" type="Keyboard">
+                            <param id="0" name="Key">97 (Numero 1)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="480145188707289" type="System">
+                            <param id="0" name="Variable">gamemode</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="916753493314949" type="modesel">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="927952525499204" type="enter">
+                            <param id="0" name="Frame number">0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="158700979029963">
+                            <conditions>
+                                <condition id="-34" name="Pick by evaluate" sid="679262972927935" type="System">
+                                    <param id="0" name="Object">modesel</param>
+                                    <param id="1" name="Expression">modesel.mode = 1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="365279113935907" type="modesel">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="953069457444221">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="657259593829267" type="Keyboard">
+                            <param id="0" name="Key">50 (2)</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="633635703466697" type="Keyboard">
+                            <param id="0" name="Key">98 (Numero 2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="559279601607440" type="System">
+                            <param id="0" name="Variable">gamemode</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="675457945554122" type="modesel">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="933907704158654" type="enter">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="261964535559122">
+                            <conditions>
+                                <condition id="-34" name="Pick by evaluate" sid="658344694221037" type="System">
+                                    <param id="0" name="Object">modesel</param>
+                                    <param id="1" name="Expression">modesel.mode = 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="668103487292002" type="modesel">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="512894429351970">
                     <conditions>
@@ -142,9 +299,12 @@
                     </conditions>
                     <actions>
                         <action id="-12" name="Set group active" sid="193463969382490" type="System">
-                            <param id="0" name="Group name">&quot;charsel&quot;</param>
+                            <param id="0" name="Group name">&quot;modesel&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="553973935462696" type="fader" />
+                        <action id="-9" name="Destroy" sid="514287175114302" type="menuitems" />
+                        <action id="-9" name="Destroy" sid="220093585510003" type="versiontxt" />
                     </actions>
                     <sub-events>
                         <comment>Start the STOP game</comment>
@@ -153,19 +313,10 @@
                                 <condition id="1" name="Compare parameter" sid="525413909405990" type="Function">
                                     <param id="0" name="Index">0</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;stop&quot;</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="637909515619880" type="System">
-                                    <param id="0" name="Object to create">fader</param>
-                                    <param id="1" name="Layer">&quot;ui2&quot;</param>
-                                    <param id="2" name="X">160</param>
-                                    <param id="3" name="Y">90</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="300060470641792" type="System">
-                                    <param id="0" name="Seconds">1</param>
-                                </action>
                                 <action id="-12" name="Set group active" sid="579407614587195" type="System">
                                     <param id="0" name="Group name">&quot;STOP&quot;</param>
                                     <param id="1" name="State">1</param>
@@ -180,8 +331,6 @@
                                     <param id="0" name="Instance variable">timer</param>
                                     <param id="1" name="Value">6000</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="514287175114302" type="charsel" />
-                                <action id="-9" name="Destroy" sid="220093585510003" type="versiontxt" />
                             </actions>
                             <sub-events>
                                 <event-block sid="679075267815249">
@@ -233,7 +382,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="508794587024844" type="announcements">
-                            <param id="0" name="Text">&quot;Player &quot;&amp;str(player.playern)&amp;&quot; wins!&quot;</param>
+                            <param id="0" name="Text">&quot;Player &quot;&amp;str(player.playern+1)&amp;&quot; wins!&quot;</param>
                         </action>
                         <action id="-16" name="Set opacity" sid="321894081769281" type="announcements">
                             <param id="0" name="Opacity">100</param>
@@ -333,7 +482,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Append text" sid="211170255075650" type="announcements">
-                                            <param id="0" name="Text">newline&amp;&quot;Player &quot;&amp;str(player.playern)&amp;&quot; defeated!&quot;</param>
+                                            <param id="0" name="Text">newline&amp;&quot;Player &quot;&amp;str(player.playern+1)&amp;&quot; defeated!&quot;</param>
                                         </action>
                                         <action behavior="Fade" id="0" name="Restart fade" sid="922528174784204" type="announcements" />
                                     </actions>
@@ -344,7 +493,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set text" sid="176959670148321" type="announcements">
-                                            <param id="0" name="Text">&quot;Player &quot;&amp;str(player.playern)&amp;&quot; defeated!&quot;</param>
+                                            <param id="0" name="Text">&quot;Player &quot;&amp;str(player.playern+1)&amp;&quot; defeated!&quot;</param>
                                         </action>
                                         <action behavior="Fade" id="0" name="Restart fade" sid="895359801356474" type="announcements" />
                                     </actions>
