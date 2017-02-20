@@ -19,7 +19,6 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
@@ -63,9 +62,6 @@
         </object-type>
         <object-type name="Mouse" sid="3506161195311074">
             <plugin id="Mouse" />
-        </object-type>
-        <object-type name="Touch" sid="2463496682349194">
-            <plugin id="Touch" />
         </object-type>
         <object-type name="Audio" sid="2722091819329769">
             <plugin id="Audio" />
@@ -889,6 +885,24 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="switch_audio" sid="686013017536691">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="857115765744680" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="switch_music" sid="176744224177404">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="848688801866994" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="players" plugin-id="Sprite" sid="844873084794032">
@@ -936,6 +950,8 @@
                 <member>iconKey</member>
                 <member>logo</member>
                 <member>modesel</member>
+                <member>switch_audio</member>
+                <member>switch_music</member>
             </members>
             <behaviors>
                 <behavior-type name="DestroyOutsideLayout2" sid="507443686815020">
@@ -958,11 +974,6 @@
         </global-instance>
         <global-instance type="Keyboard" uid="3" />
         <global-instance type="Mouse" uid="4" />
-        <global-instance type="Touch" uid="5">
-            <properties>
-                <use-mouse-input>Yes</use-mouse-input>
-            </properties>
-        </global-instance>
         <global-instance type="Audio" uid="6">
             <properties>
                 <timescale-audio>Off</timescale-audio>
