@@ -792,6 +792,7 @@
                         <keyCode>0</keyCode>
                         <playerNumber>0</playerNumber>
                         <hasItem>0</hasItem>
+                        <waveType>0</waveType>
                         <playern>0</playern>
                     </instance-variables>
                     <behavior-instances>

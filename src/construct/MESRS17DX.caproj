@@ -1067,14 +1067,9 @@
         <object-type name="item_blink" sid="959159418564027">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="7" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861981546932193" speed="10">
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861981546932193" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="4" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1099,6 +1094,7 @@
                 <instance-variable name="keyCode" sid="400138939577478" type="number" />
                 <instance-variable name="playerNumber" sid="572434211765930" type="number" />
                 <instance-variable name="hasItem" sid="674122679139360" type="number" />
+                <instance-variable name="waveType" sid="824564626749798" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="478900355530495">
@@ -1201,14 +1197,16 @@
         <file name="explosion2.ogg" />
         <file name="explosion3.ogg" />
         <file name="explosion4.ogg" />
-        <file name="Mariel.ogg" />
-        <file name="Oliver.ogg" />
         <file name="racestart.ogg" />
         <file name="select.ogg" />
-        <file name="viejitito.ogg" />
-        <file name="Omario.ogg" />
-        <file name="Kirby.ogg" />
-        <file name="Nabey.ogg" />
+        <file name="0.ogg" />
+        <file name="1.ogg" />
+        <file name="2.ogg" />
+        <file name="3.ogg" />
+        <file name="4.ogg" />
+        <file name="5.ogg" />
+        <file name="6.ogg" />
+        <file name="7.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="carrera1stop.ogg" />
