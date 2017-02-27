@@ -24,6 +24,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
@@ -38,7 +39,7 @@
         <width>320</width>
         <height>180</height>
     </window-size>
-    <pixel-rounding>1</pixel-rounding>
+    <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
@@ -172,7 +173,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="itemGenerator" sid="679251066239753">
+        <object-type name="enemyGenerator" sid="679251066239753">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="timer" sid="946091264989279" type="number" />
@@ -903,6 +904,191 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="itemGenerator" sid="402345678896842">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="timer" sid="500168472552526" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="551710927661622" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="shield" sid="719643357044334">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="979776246998765">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="339240895686310">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="341370102119424" speed="20">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="item_shield" sid="164279837621925">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="7" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="276205624449998" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="item_blink" sid="959159418564027">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="7" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861981546932193" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="flasher" sid="798542350235043">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="flash" sid="115417103229456" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="412462527650178" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="players" plugin-id="Sprite" sid="844873084794032">
@@ -912,6 +1098,7 @@
             <instance-variables>
                 <instance-variable name="keyCode" sid="400138939577478" type="number" />
                 <instance-variable name="playerNumber" sid="572434211765930" type="number" />
+                <instance-variable name="hasItem" sid="674122679139360" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="478900355530495">
@@ -922,6 +1109,9 @@
                 </behavior-type>
                 <behavior-type name="DestroyOutsideLayout" sid="683652646571750">
                     <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="347754947066710">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
         </family>
@@ -956,6 +1146,20 @@
             <behaviors>
                 <behavior-type name="DestroyOutsideLayout2" sid="507443686815020">
                     <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="items" plugin-id="Sprite" sid="274331939031109">
+            <members>
+                <member>item_blink</member>
+                <member>item_shield</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="type" sid="651441116323180" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="749511958424600">
+                    <behavior id="Sin" />
                 </behavior-type>
             </behaviors>
         </family>
