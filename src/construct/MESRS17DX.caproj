@@ -236,10 +236,10 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="bgMoon" sid="951691742971255">
+        <object-type name="moons" sid="951691742971255">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="947210002043621" speed="5">
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="947210002043621" speed="0">
                     <frame duration="1" hotspotX="0.6" hotspotY="0.588889" original-source="E:\My Games\GGJ17\src\graphics\titlescreen-moon-bg.png">
                         <collision-poly>
                             <point x="0.6" y="0.0222222" />
@@ -249,10 +249,13 @@
                             <point x="0.0222222" y="0.588889" />
                         </collision-poly>
                     </frame>
+                    <frame duration="1" hotspotX="0.655556" hotspotY="0.577778" original-source="E:\My Games\GGJ17\src\graphics\titlescreen-moon2-bg.png" />
+                    <frame duration="1" hotspotX="0.655556" hotspotY="0.577778" original-source="E:\My Games\GGJ17\src\graphics\titlescreen-moon3-bg.png" />
+                    <frame duration="1" hotspotX="0.655556" hotspotY="0.577778" original-source="E:\My Games\GGJ17\src\graphics\titlescreen-moon4-bg.png" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="bgearth" sid="279585341318064">
+        <object-type name="atmos1" sid="279585341318064">
             <plugin id="TiledBg" />
             <texture original-source="E:\My Games\GGJ17\src\graphics\titlescreen-earth-bg.png" />
         </object-type>
@@ -524,8 +527,8 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="2" loop="1" name="ship3" pingpong="0" repeatcount="1" repeatto="0" sid="780751885624952" speed="4">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships06.png">
+                <animation framecount="4" loop="1" name="ship3" pingpong="0" repeatcount="1" repeatto="0" sid="780751885624952" speed="4">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <image-point name="shooter" x="1.125" y="0.5" />
                         <collision-poly>
                             <point x="0.40625" y="0.375" />
@@ -534,7 +537,26 @@
                             <point x="0.40625" y="0.625" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\ships07.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0833333" y="0.333333" />
+                            <point x="0.916667" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.895833" y="0.583333" />
+                            <point x="0.104167" y="0.583333" />
+                            <point x="0.0520833" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="shooter" x="1.125" y="0.5" />
+                        <collision-poly>
+                            <point x="0.40625" y="0.375" />
+                            <point x="0.59375" y="0.375" />
+                            <point x="0.59375" y="0.625" />
+                            <point x="0.40625" y="0.625" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <image-point name="shooter" x="1.125" y="0.5" />
                         <collision-poly>
                             <point x="0.40625" y="0.375" />
@@ -605,7 +627,7 @@
                     </frame>
                 </animation>
                 <animation framecount="2" loop="1" name="ship7" pingpong="0" repeatcount="1" repeatto="0" sid="725313895498848" speed="4">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat0.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat1.png">
                         <image-point name="shooter" x="1.125" y="0.5" />
                         <collision-poly>
                             <point x="0.40625" y="0.375" />
@@ -614,7 +636,7 @@
                             <point x="0.40625" y="0.625" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat1.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEGV\Documents\GGJ 2017\Ships\hat\mexihat0.png">
                         <image-point name="shooter" x="1.125" y="0.5" />
                         <collision-poly>
                             <point x="0.40625" y="0.375" />
@@ -1033,17 +1055,29 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="900772751002589" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.5" y="0" />
-                            <point x="1" y="0.5" />
-                            <point x="0.5" y="1" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
+                <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="900772751002589" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\My Games\GGJ17\src\graphics\bulletenergy.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\My Games\GGJ17\src\graphics\bulletrocket.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\My Games\GGJ17\src\graphics\bulletball.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\My Games\GGJ17\src\graphics\bulletbag.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\My Games\GGJ17\src\graphics\bulletcoin.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\My Games\GGJ17\src\graphics\bulletstinger.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\My Games\GGJ17\src\graphics\bulletptero.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\My Games\GGJ17\src\graphics\bullettaco.png" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="atmos2" sid="680254888459372">
+            <plugin id="TiledBg" />
+            <texture original-source="E:\My Games\GGJ17\src\graphics\titlescreen-02-bg.png" />
+        </object-type>
+        <object-type name="atmos3" sid="350620348718005">
+            <plugin id="TiledBg" />
+            <texture original-source="E:\My Games\GGJ17\src\graphics\titlescreen-03-bg.png" />
+        </object-type>
+        <object-type name="atmos4" sid="172360653751560">
+            <plugin id="TiledBg" />
+            <texture original-source="E:\My Games\GGJ17\src\graphics\titlescreen-04-bg.png" />
         </object-type>
     </object-folder>
     <families>
@@ -1131,6 +1165,19 @@
                 <member>shield</member>
             </members>
         </family>
+        <family name="bgatmos" plugin-id="TiledBg" sid="484582606745853">
+            <members>
+                <member>atmos1</member>
+                <member>atmos2</member>
+                <member>atmos3</member>
+                <member>atmos4</member>
+            </members>
+        </family>
+        <family name="stars" plugin-id="TiledBg" sid="180643302008517">
+            <members>
+                <member>bgstars</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout>game.xml</layout>
@@ -1179,12 +1226,18 @@
         <file name="5.ogg" />
         <file name="6.ogg" />
         <file name="7.ogg" />
+        <file name="blink.ogg" />
+        <file name="shield.ogg" />
+        <file name="shieldCollision.ogg" />
+        <file name="shoot.ogg" />
     </sounds-folder>
     <music-folder>
-        <file name="carrera1stop.ogg" />
+        <file name="StopMode.ogg" />
         <file name="Credits.ogg" />
         <file name="Intro.ogg" />
-        <file name="victory.ogg" />
+        <file name="Victory.ogg" />
+        <file name="BoostMode.ogg" />
+        <file name="ShootMode.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
